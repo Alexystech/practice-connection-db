@@ -6,7 +6,7 @@
 package com.slasher.slasher;
 
 import com.slasher.slasher.entity.User;
-import com.slasher.slasher.repository.UserRepository;
+import com.slasher.slasher.repository.impl.UserRepositoryImpl;
 
 /**
  *
@@ -19,7 +19,7 @@ public class MainClass {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        UserRepository userRepository = new UserRepository();
+        UserRepositoryImpl userRepositoryImpl = new UserRepositoryImpl();
 
         User usuario = User.builder()
             .idUser(1L)
@@ -27,7 +27,7 @@ public class MainClass {
             .password("12345")
             .build();
 
-        userRepository.save(usuario);
+        userRepositoryImpl.save(usuario);
     }
     
 }
